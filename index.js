@@ -14,7 +14,7 @@ app.disableHardwareAcceleration()
 			resizable: false,
 			title: "shadow",
 			frame: false,
-			transparent: true
+			transparent: false
 		})
 
 		// and load the index.html of the app.
