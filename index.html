@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+	    const $ = require('jquery');
+	    console.log($);
+	    const remote = require('electron').remote;
+	    $(function() {
+            $('#close-btn').on('click', e => {
+                console.log("test");
+                remote.getCurrentWindow().close()
+            })
+	    });
+    </script>
+</head>
+<body>
+<img class="center" src="./img/Logo_Shadow_(Blade-group).png">
+
+<button class="center" type="button">Launch</button>
+<button class="center" id="close-btn" type="button">Quit</button>
+</body>
+</html>
